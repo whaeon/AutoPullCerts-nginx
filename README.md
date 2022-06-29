@@ -6,3 +6,13 @@ Automatically pull certificates from dnspod
 
 ## TODO
 - if the domain was not update, the program need to determine which to upload.
+- Determine whether to download the certificate by the certificate expiration time.
+
+## Quick Start
+example
+```bash
+go build -o cert cmd/app
+
+# download certificates from dnspod
+./cert --download true
+```

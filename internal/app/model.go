@@ -9,6 +9,7 @@ import (
 type Opts interface {
 	List()
 	Upload()
+	Download()
 }
 
 type RequestParams struct {

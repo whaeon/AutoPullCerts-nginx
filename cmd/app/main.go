@@ -7,6 +7,7 @@ import (
 
 func main() {
 	domain := flag.String("D", "", "Domain")
+	download := flag.Bool("download", false, "download certificates contained in nginx.conf")
 	upload := flag.Bool("upload", false, "upload certs to dnspod")
 	list := flag.Bool("list", false, "list certificates")
 	display := flag.Bool("d", false, "list sub options, display certificate information (default false)")
@@ -22,6 +23,8 @@ func main() {
 		cert.List()
 	} else if *upload {
 		cert.Upload()
+	} else if *download {
+		cert.Download()
 	}
 	// app.File()
 }
